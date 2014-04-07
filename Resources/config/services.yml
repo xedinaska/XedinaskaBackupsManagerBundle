@@ -1,0 +1,7 @@
+parameters:
+    xedinaska.mongo_backup.class: Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases\MongoBackupFacade
+
+services:
+    xedinaska.mongo_backup:
+        class: %xedinaska.mongo_backup.class%
+        arguments: [@dizda.cloudbackup.database.mongodb]

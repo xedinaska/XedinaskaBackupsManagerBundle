@@ -1,0 +1,3 @@
+xedinaska_backups_manager_homepage:
+    pattern:  /backups
+    defaults: { _controller: XedinaskaBackupsManagerBundle:Default:index }
