@@ -9,9 +9,10 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        $mongoBackup = $this->get('xedinaska.mongo_backup');
+       /* $mongoBackup = $this->get('xedinaska.mongo_backup');
         $mongoBackup->backup();
-        $backupPath = $mongoBackup->getBackupPath();
+        $backupPath = $mongoBackup->getBackupPath();*/
+
 
 
         return $this->render('XedinaskaBackupsManagerBundle:Default:index.html.twig');
