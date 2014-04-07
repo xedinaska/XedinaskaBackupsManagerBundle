@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\AdminBundle\Tests\Controller;
+namespace Domain\AdminBundle\Tests\Service\BackupFacade\Databases;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
