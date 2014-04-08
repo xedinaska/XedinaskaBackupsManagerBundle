@@ -4,6 +4,7 @@ namespace Xedinaska\BackupsManagerBundle\Service\BackupFacade;
 
 /**
  * Interface IBackup
+ *
  * @package Xedinaska\BackupsManagerBundle\Service\BackupFacade
  */
 interface IBackup

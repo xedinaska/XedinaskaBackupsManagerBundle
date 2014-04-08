@@ -13,16 +13,24 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
 {
     /**
-     * {@inheritDoc}
+     * Create config tree builder
+     *
+     * @access public
+     * @return void
      */
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('xedinaska_backups_manager');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('backups_storage_type')
+                    ->defaultValue('orm')
+                ->end()
+                ->scalarNode('model_manager_name')->defaultNull()->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }

@@ -1,0 +1,21 @@
+Xedinaska\BackupsManagerBundle\Model\Backup:
+    type: mappedSuperclass
+    fields:
+        id:
+            type: int
+            id: true
+            generator:
+                strategy: AUTO
+        path:
+            type: string
+            length: 255
+            nullable: false
+        type:
+            type: string
+            length: 255
+            nullable: false
+        size:
+            type: int
+            length: 11
+        created:
+            type: date
