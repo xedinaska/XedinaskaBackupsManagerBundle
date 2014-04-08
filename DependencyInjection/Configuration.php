@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('backups_storage_type')
-                    ->defaultValue('orm')
+                    ->defaultValue('mongodb')
                 ->end()
                 ->scalarNode('model_manager_name')->defaultNull()->end()
             ->end()
