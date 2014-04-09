@@ -15,7 +15,7 @@ use Dizda\CloudBackupBundle\Databases\MongoDB as DizdaMongoDB;
 class MongoBackupFacade extends AbstractBackup implements IBackup
 {
     /**
-     * @var Dizda Backup Instance
+     * @var DizdaMongoDB Instance
      */
     protected $mongoBackupService;
 
@@ -50,7 +50,9 @@ class MongoBackupFacade extends AbstractBackup implements IBackup
      */
     public function getBackupPath()
     {
-        return $this->mongoBackupService
+        $archivePath = $this->mongoBackupService
             ->getArchivePath();
+
+        return str_replace('db/../', '', $archivePath);
     }
 }

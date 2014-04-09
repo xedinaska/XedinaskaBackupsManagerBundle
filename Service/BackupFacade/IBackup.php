@@ -24,4 +24,12 @@ interface IBackup
      * @return mixed
      */
     public function getBackupPath();
+
+    /**
+     * Get backup size
+     *
+     * @access public
+     * @return mixed
+     */
+    public function getBackupSize();
 }

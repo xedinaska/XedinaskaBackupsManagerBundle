@@ -29,14 +29,21 @@ abstract class AbstractBackup implements IBackup
     public abstract function backup();
 
     /**
-     * Get path of backup file
+     * Get backup size if file exist. Else - return 0
      *
      * @access public
-     * @return backup
+     * @return int
      */
-    public function getBackupPath()
+    public function getBackupSize()
     {
-        return $this->backupPath;
+
+        $backupPath = $this->getBackupPath();
+
+        if (file_exists($backupPath)) {
+            return filesize($backupPath);
+        }
+
+        return 0;
     }
 
     /**
