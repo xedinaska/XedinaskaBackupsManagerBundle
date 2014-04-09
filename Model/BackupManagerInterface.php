@@ -37,6 +37,14 @@ interface BackupManagerInterface
     public function removeBackup(BackupInterface $backup);
 
     /**
+     * Find all backup records
+     *
+     * @access public
+     * @return mixed
+     */
+    public function findAll();
+
+    /**
      * Find backup by created date
      *
      * @access public

@@ -71,6 +71,17 @@ class BackupManager extends BaseBackupManager
     }
 
     /**
+     * Find all backup records
+     *
+     * @access public
+     * @return array|mixed
+     */
+    public function findAll()
+    {
+        return $this->repository->findAll();
+    }
+
+    /**
      * Find backup by passed criteria
      *
      * @access public
