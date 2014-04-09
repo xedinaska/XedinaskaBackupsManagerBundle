@@ -4,6 +4,7 @@ namespace Xedinaska\BackupsManagerBundle\Controller;
 
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
+use Xedinaska\BackupsManagerBundle\Model\Backup;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -32,7 +33,7 @@ class BackupsController extends Controller
      */
     public function addAction()
     {
-        $type = 'manual';
+        $type = Backup::MANUAL_BACKUP_TYPE;
 
         $backupRunner = $this->get('xedinaska.backup_runner_service');
         $backupRunner->makeBackup($type);

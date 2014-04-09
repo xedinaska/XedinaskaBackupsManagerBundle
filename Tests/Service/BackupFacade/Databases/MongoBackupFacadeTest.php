@@ -5,7 +5,7 @@ namespace Domain\AdminBundle\Tests\Service\BackupFacade\Databases;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
- * Class UsersControllerTest
+ * Class MongoBackupFacadeTest
  * Tests for users pages
  *
  * @package Domain\AdminBundle\Tests\Controller

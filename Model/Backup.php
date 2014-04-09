@@ -10,6 +10,10 @@ namespace Xedinaska\BackupsManagerBundle\Model;
  */
 abstract class Backup implements BackupInterface
 {
+    const AUTO_BACKUP_TYPE = 'auto';
+
+    const MANUAL_BACKUP_TYPE = 'manual';
+
     /**
      * @var int
      */

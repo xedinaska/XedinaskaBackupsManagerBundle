@@ -2,7 +2,7 @@
 
 namespace Xedinaska\BackupsManagerBundle\Command;
 
-use Domain\Core\Service\Queue\Queues\Queue;
+use Xedinaska\BackupsManagerBundle\Model\Backup;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -27,7 +27,7 @@ class BackupMongoCommand extends Command
     {
         $this->setName('mongo:db:backup')
             ->setDescription('Backup mongo database')
-            ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Queue name', 'auto')
+            ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Queue name', Backup::AUTO_BACKUP_TYPE)
         ;
     }
 
