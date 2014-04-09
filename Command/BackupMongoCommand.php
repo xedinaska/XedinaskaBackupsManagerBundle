@@ -44,18 +44,8 @@ class BackupMongoCommand extends Command
 
         $output->writeln('<comment>Start mongo database backup:</comment>');
 
-        $mongoBackup = $container->get('xedinaska.mongo_backup');
-        $mongoBackup->backup();
-
-        $backupsManager = $container->get('xedinaska.backups_manager');
-
-        $backup = $backupsManager->createBackup();
-        $backup->setCreated(new \DateTime());
-        $backup->setSize($mongoBackup->getBackupSize());
-        $backup->setType($type);
-        $backup->setPath($mongoBackup->getBackupPath());
-
-        $backupsManager->updateBackup($backup);
+        $backupRunner = $container->get('xedinaska.backup_runner_service');
+        $backupRunner->makeBackup($type);
 
         $output->writeln('<comment>Done.</comment>');
     }

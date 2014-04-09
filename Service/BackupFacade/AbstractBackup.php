@@ -7,7 +7,7 @@ namespace Xedinaska\BackupsManagerBundle\Service\BackupFacade;
  *
  * @package Xedinaska\BackupsManagerBundle\Service\BackupFacade
  */
-abstract class AbstractBackup implements IBackup
+abstract class AbstractBackup implements BackupInterface
 {
     /**
      * @var backup archive file

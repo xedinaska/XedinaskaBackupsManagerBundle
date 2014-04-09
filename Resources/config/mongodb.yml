@@ -1,6 +1,7 @@
 parameters:
     xedinaska.doctrine_backups_manager.class: Xedinaska\BackupsManagerBundle\Doctrine\BackupManager
     xedinaska.mongo_backup.class: Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases\MongoBackupFacade
+    xedinaska.backup_runner_service.class: Xedinaska\BackupsManagerBundle\Service\BackupRunner\MongoBackupRunner
 
 services:
     xedinaska.backups_manager:
@@ -16,3 +17,7 @@ services:
     xedinaska.mongo_backup:
         class: %xedinaska.mongo_backup.class%
         arguments: [@dizda.cloudbackup.database.mongodb]
+
+    xedinaska.backup_runner_service:
+        class: %xedinaska.backup_runner_service.class%
+        arguments: [@xedinaska.mongo_backup, @xedinaska.backups_manager]

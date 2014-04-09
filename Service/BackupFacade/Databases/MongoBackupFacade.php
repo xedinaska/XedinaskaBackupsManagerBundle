@@ -3,7 +3,7 @@
 namespace Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases;
 
 use Xedinaska\BackupsManagerBundle\Service\BackupFacade\AbstractBackup;
-use Xedinaska\BackupsManagerBundle\Service\BackupFacade\IBackup;
+use Xedinaska\BackupsManagerBundle\Service\BackupFacade\BackupInterface;
 use Dizda\CloudBackupBundle\Databases\MongoDB as DizdaMongoDB;
 
 /**
@@ -12,7 +12,7 @@ use Dizda\CloudBackupBundle\Databases\MongoDB as DizdaMongoDB;
  *
  * @package Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases
  */
-class MongoBackupFacade extends AbstractBackup implements IBackup
+class MongoBackupFacade extends AbstractBackup implements BackupInterface
 {
     /**
      * @var DizdaMongoDB Instance
