@@ -1,0 +1,23 @@
+parameters:
+    xedinaska.doctrine_backups_manager.class: Xedinaska\BackupsManagerBundle\Doctrine\BackupManager
+    xedinaska.mongo_backup.class: Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases\MongoBackupFacade
+    xedinaska.backup_runner_service.class: Xedinaska\BackupsManagerBundle\Service\BackupRunner\MongoBackupRunner
+
+services:
+    xedinaska.backups_manager:
+        class: %xedinaska.doctrine_backups_manager.class%
+        arguments: [@xedinaska.backups_document_manager, %xedinaska_backups_manager.backups_storage.class%]
+
+    xedinaska.backups_document_manager:
+        class: Doctrine\ODM\MongoDB\DocumentManager
+        factory_service: doctrine_mongodb
+        factory_method: getManager
+        public: false
+
+    xedinaska.mongo_backup:
+        class: %xedinaska.mongo_backup.class%
+        arguments: [@dizda.backup.database.mongodb]
+
+    xedinaska.backup_runner_service:
+        class: %xedinaska.backup_runner_service.class%
+        arguments: [@xedinaska.mongo_backup, @xedinaska.backups_manager]
