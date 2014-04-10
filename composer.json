@@ -1,5 +1,5 @@
 {
-    "name": "Xedin/xedinaska-backups-manager-bundle",
+    "name": "xedin/xedinaska-backups-manager-bundle",
     "description": "Create backups of your project db. View backups list. Create backups manual or with cron (through cli commands). Symfony2 bundle",
     "authors": [
         {
