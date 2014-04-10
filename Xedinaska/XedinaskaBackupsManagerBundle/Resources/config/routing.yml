@@ -1,7 +1,0 @@
-xedinaska_backups_manager_homepage:
-    pattern:  /backups
-    defaults: { _controller: XedinaskaBackupsManagerBundle:Backups:index }
-
-xedinaska_backups_manager_add_backup:
-    pattern:  /backups/add
-    defaults: { _controller: XedinaskaBackupsManagerBundle:Backups:add }
