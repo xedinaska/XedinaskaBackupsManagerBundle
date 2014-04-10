@@ -39,6 +39,9 @@ class MongoBackupFacade extends AbstractBackup implements BackupInterface
         //call .tar compressor
         $this->mongoBackupService->compression();
 
+        //remove data path with db dump (not archive)
+        $this->mongoBackupService->removeDataPath();
+
         return $this;
     }
 
