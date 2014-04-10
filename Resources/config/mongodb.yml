@@ -16,7 +16,7 @@ services:
 
     xedinaska.mongo_backup:
         class: %xedinaska.mongo_backup.class%
-        arguments: [@dizda.cloudbackup.database.mongodb]
+        arguments: [@dizda.backup.database.mongodb]
 
     xedinaska.backup_runner_service:
         class: %xedinaska.backup_runner_service.class%

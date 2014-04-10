@@ -4,11 +4,11 @@ namespace Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases;
 
 use Xedinaska\BackupsManagerBundle\Service\BackupFacade\AbstractBackup;
 use Xedinaska\BackupsManagerBundle\Service\BackupFacade\BackupInterface;
-use Dizda\CloudBackupBundle\Databases\MongoDB as DizdaMongoDB;
+use Dizda\BackupBundle\Databases\MongoDB as DizdaMongoDB;
 
 /**
  * Class MongoDB
- * Facade for dizda (https://github.com/dizda/CloudBackupBundle) MongoDB back-upper
+ * Facade for dizda (https://github.com/dizda/BackupBundle) MongoDB back-upper
  *
  * @package Xedinaska\BackupsManagerBundle\Service\BackupFacade\Databases
  */
